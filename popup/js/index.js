@@ -66,7 +66,7 @@ function GetCommunities(lemmyCreds) {
         }).then((resp) => {
             tmp = document.createElement('option')
             tmp.setAttribute('value', resp.data.communities[0].community.id)
-            tmp.innerHTML = `!${resp.data.communities[0].community.name} | ${resp.data.communities[0].community.title}`;
+            tmp.innerText = `!${resp.data.communities[0].community.name} | ${resp.data.communities[0].community.title}`;
             document.getElementById('communitySelector').appendChild(tmp)
             axios({
                 method: 'GET',
@@ -76,7 +76,7 @@ function GetCommunities(lemmyCreds) {
                 response.data.communities.forEach((cmObj) => {
                     tmp = document.createElement('option')
                     tmp.setAttribute('value', cmObj.community.id)
-                    tmp.innerHTML = `!${cmObj.community.name} | ${cmObj.community.title}`;
+                    tmp.innerText = `!${cmObj.community.name} | ${cmObj.community.title}`;
                     document.getElementById('communitySelector').appendChild(tmp)
                 })
             }).catch((err) => {console.log(err);});

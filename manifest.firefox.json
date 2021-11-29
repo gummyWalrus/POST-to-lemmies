@@ -6,7 +6,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "extension@postlemmies.com",
-      "strict_min_version": "42.0"
+      "strict_min_version": "90.0"
     }
   },
   "description": "Créer un Post dans lemmy en 3 clics",
