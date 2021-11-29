@@ -5,6 +5,8 @@ var g_lemmies = [];
 const storage = getBrowserStorage();
 var postLink = '';
 
+feather.replace()
+
 function getBrowserStorage() {
     if (browser) {
         return browser.storage.sync;
@@ -150,7 +152,7 @@ function createPost(lemmyCreds) {
 async function init() {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     if (prefersDarkScheme)
-        $('#stylesheetTheme').attr('href', 'styles.dark.css')
+        $('#stylesheetTheme').attr('href', 'styles.dark.min.css')
     runtime()
     $('#errorNoLemmy').hide();
     $('#deleteLemmy').on('click', () => {

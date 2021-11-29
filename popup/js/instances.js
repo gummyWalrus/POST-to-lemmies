@@ -149,14 +149,14 @@ var mdropFieldsOk = {"URL": false, "login": false, "password": false}
 const btn = $('#dropLemmyInputPasswordToggle')
 const icon = btn.children('i')
 btn.on('click', () => {
-    if (icon.hasClass('fa-eye-slash')) {
-        icon.removeClass('fa-eye-slash')
-        icon.addClass('fa-eye')
+    if (icon.attr('data-feather') === 'eye-off') {
+        icon.attr('data-feather', 'eye')
         $('#dropLemmyInputPassword').attr('type', 'text')
+        feather.replace()
     } else {
-        icon.removeClass('fa-eye')
-        icon.addClass('fa-eye-slash')
+        icon.attr('data-feather', 'eye-off')
         $('#dropLemmyInputPassword').attr('type', 'password')
+        feather.replace()
     }
 })
 

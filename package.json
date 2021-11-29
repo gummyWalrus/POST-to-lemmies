@@ -1,0 +1,28 @@
+{
+  "name": "post-to-lemmies",
+  "version": "1.0.0",
+  "description": "A cross-browser extension to Post lemmies in a few clicks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "npx node-sass css/postlemmy.dark.scss styles.dark.css && npx node-sass css/postlemmy.scss styles.css && npx css-minify -f styles.dark.css && npx css-minify -f styles.css && mv css-dist/* popup/. && rm *.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gummyWalrus/POST-to-lemmies.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN ./LICENSE file",
+  "bugs": {
+    "url": "https://github.com/gummyWalrus/POST-to-lemmies/issues"
+  },
+  "homepage": "https://github.com/gummyWalrus/POST-to-lemmies#readme",
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "css-minify": "^2.0.0",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "feather-icons": "^4.28.0"
+  }
+}

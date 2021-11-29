@@ -1,26 +1,25 @@
 <html class="has-background-dark">
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="styles.css" id="stylesheetTheme">
+        <link rel="stylesheet" href="styles.min.css" id="stylesheetTheme">
         <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="font-awesome/css/all.css">
     </head>
     <script src="../scripts/browser-polyfill.js" type="text/javascript"></script>
     <body>
         <div id="defaultPage" class="mx-3">
             <div class="my-3">
-                <span class="title is-family-monospace is-4 ml-5" style="top: 1.2rem; position: absolute;">POST to <span id="serverTitle">/lemmy</span></span>
+                <span class="title is-4 ml-5" style="top: 1.2rem; position: absolute;">POST to <span id="serverTitle">/lemmies</span></span>
                 <span class="image-inline" style="top: -8px; left: 410px; position: absolute;"><img id="serverLogo"></span>
             </div>
             <div style="margin-top: 4rem;">
                 <span id="selectLemmy"></span>
-                <span id="addLemmyDropdown" class="ml-2">
+                <span id="addLemmyDropdown">
                     <div class="dropdown is-right" id="addLemmyDropdownDiv">
                         <div class="dropdown-trigger">
                             <button class="button is-primary is-outlined" tab-index="-1" id="dropdownLemmyBtn" aria-haspopup="true" aria-controls="dropdown-menu1">
-                                <span ><i class="fa fa-plus"></i></span>
+                                <span ><i data-feather="plus"></i></span>
                                 <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                <i data-feather="chevron-down" aria-hidden="true"></i>
                                 </span>
                             </button>
                         </div>
@@ -50,14 +49,14 @@
                                                 <input type="password" id="dropLemmyInputPassword" class="input is-primary is-small" placeholder="Mot de passe">
                                             </p>
                                             <p class="control">
-                                                <a class="button is-outlined is-primary has-text-primary is-small" id="dropLemmyInputPasswordToggle"><i class="fa fa-eye-slash"></i></a>
+                                                <a class="button is-outlined is-primary has-text-primary is-small" id="dropLemmyInputPasswordToggle"><i data-feather="eye-off"></i></a>
                                             </p>
                                         </div>
                                         <p class="hidden has-text-danger" id="dropLemmyPasswordEmpty">Ce champ est requis</p>
                                     </div>
                                 </div>
                                 <div class="dropdown-item">
-                                    <a id="dropLemmyCredsSubmit" class="button is-primary is-outlined has-text-primary">Ajouter<i class="ml-3 fa fa-save"></i></a>
+                                    <a id="dropLemmyCredsSubmit" class="button is-primary is-outlined has-text-primary">Ajouter<i class="ml-3" data-feather="save"></i></a>
                                 </div>
                                 <div class="has-text-success" id="dropLemmySuccess">Lemmy ajouté !</div>
                                 <div class="dropdown-item" class="is-danger" id="dropLemmyPasswordOrEmailInvalid">
@@ -67,7 +66,7 @@
                         </div>
                     </div>
                 </span>
-                <button class="button is-danger is-outlined ml-2"  tab-index="-1" id="deleteLemmy"><i class="fas fa-trash"></i></button>
+                <button class="button is-danger is-outlined"  tab-index="-1" id="deleteLemmy"><i data-feather="trash-2"></i></button>
             </div>
             <div class="field mt-2">
                 <p class="control">
@@ -83,7 +82,7 @@
                 <p class="has-text-danger hidden" id="titleEmpty">Ce champ est requis</p>
             </div>
             <textarea id="postText" class="textarea is-primary" placeholder="Commentaire..."></textarea>
-            <a class="button is-primary is-fullwidth is-outlined" id="buttonPreview">Preview <i class="ml-3 fa fa-eye"></i></a>
+            <a class="button is-primary is-fullwidth is-outlined" id="buttonPreview">Preview <i class="ml-3" data-feather="eye"></i></a>
             <span id="selectPlace"></span>
             <p class="has-text-danger" id="errorNoLemmy">Choisissez d'abord un lemmy !</p>
             <div class="modal" id="previewModal">
@@ -96,10 +95,10 @@
             <div id="linkPosted" class=" mb-3 hidden"><p class="subtitle is-5 has-text-primary mt-2" style="display: inline;">Post réussi, consultez le ici : </p><a class="button is-primary is-outlined is-fullwidth mb-2" style="display: inline; margin-left: 6%;" id="postLink"></a></div>
         </div>
     </body>
-    <script src="markdown-viewer/showdownjs/dist/showdown.js" type="text/javascript"></script>
-    <script src="font-awesome/js/all.js" type="text/javascript"></script>
+    <script src="markdown-viewer/showdownjs/dist/showdown.min.js" type="text/javascript"></script>
+    <script src="js/feather-icons/dist/feather.min.js" type="text/javascript"></script>
     <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
-    <script src="js/axios.js" type="text/javascript"></script>
+    <script src="js/axios.min.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
     <script src="js/navbar.js" type="text/javascript"></script>
     <script src="js/instances.js" type="text/javascript"></script>
