@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "POST to lemmies",
-  "version": "0.1.0",
+  "version": "",
   "author": "Loys Caucheteux",
   "description": "Créer un Post dans lemmy en 3 clics",
   "homepage_url": "https://github.com/gummyWalrus/POST-to-lemmies",
